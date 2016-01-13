@@ -1,0 +1,57 @@
+# The Penn World Tables
+
+The PWT's main purpose is to construct panel data for GDP and its components in **constant international prices**.
+
+## Background
+
+National Accounts report GDP and its components in local currency units (LCU).
+
+We could use exchange rates to make these figures into dollars.
+
+The data would then imply that people in low income countries are shockingly poor, not just very poor.
+
+This would be misleading because **prices are systematically lower** in low income countries.
+
+To compare living standards across countries (and over time), it is necessary to deflate GDP with the local price of a **consistent bundle** of goods.
+
+### How Is This Done? ###
+
+The ICP collects data on local prices every several years (**benchmark years**).
+
+Between benchmark years, prices are interpolated.  
+
+Even though there is no theoretically "best" price index, there is a substantial theory of how to construct price indices. 
+
+The PWT does this and reports **GDP in international prices**.
+
+This comes in 2 flavors:
+
+* *RGDPE*: to compare living standards (think: deflated by the consumer price index)
+* *RGDPO*: to compare productive capacity (think: deflated by a producer price index)
+
+
+## Obtaining the data
+
+The data can be downloaded [here](http://www.rug.nl/research/ggdc/data/penn-world-table).
+
+I recommend downloading the **Stata file** and converting into a [matlab dataset](http://www.mathworks.com/help/stats/dataset.html) using [Stat/Transfer](https://www.stattransfer.com/).
+
+Format of the Stata file:
+
+* each row is a country / year combination
+
+* countries are identified by their [ISO codes](http://userpage.chemie.fu-berlin.de/diverse/doc/ISO_3166.html). These are 3 letter abbreviations.
+
+* each column is a variable (except for the first 4 columns which are country / year info)
+
+Since Mathworks plans to phase out datasets, it would make sense to then convert the whole thing into a Matlab `table` using [dataset2table](http://www.mathworks.com/help/stats/dataset2table.html).
+
+
+It would now make sense to make each variable into an array indexed by [country, year]. 
+
+* Fortunately, someone has already done this, so you can download the result from the PWT web site.
+
+* Unfortunately, that file contains errors (as of 2014-Dec). So you cannot use it!
+
+
+----------------------
