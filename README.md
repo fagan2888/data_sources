@@ -1,4 +1,3 @@
-# Matlab and Programming Introduction
-By Lutz Hendricks
+# data_sources
 
-This repo contains material for classes on Matlab and programming.
+Notes on popular data sources
