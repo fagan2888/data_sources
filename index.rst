@@ -12,9 +12,9 @@ Contents:
    :maxdepth: 2
 
    pwt.mmd
-   pwt_code.mmd
    wdi.mmd
    barro_lee.mmd
+   weblinks.mmd
 
 
 Indices and tables
